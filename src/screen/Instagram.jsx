@@ -4,6 +4,8 @@ import Gonderiler from "./gonderiler"
 import Reels from "./reels"
 import Etiketlenenler from "./etiketlenenler"
 import grid from "./../assets/icons/grid.png"
+import video from "./../assets/icons/video.png"
+import tag from "./../assets/icons/tag.png"
 
 function Instagram() {
   const [toggleState, setToggleState] = useState(1);
@@ -20,19 +22,21 @@ function Instagram() {
           onClick={() => toggleTab(1)}
         >
          <img src={grid} alt="grid" />
-        Gönderiler
+        GÖNDERİLER
         </button>
         <button
           className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(2)}
         >
-         Reels
+        <img src={video} alt="video" />
+         REELS
         </button>
         <button
           className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(3)}
         >
-         Etiketlenenler
+          <img src={tag} alt="tag" />
+         ETİKETLENENLER
         </button>
       </div>
 
