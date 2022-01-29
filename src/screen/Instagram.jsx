@@ -7,13 +7,14 @@ import grid from "./../assets/icons/grid.png"
 import video from "./../assets/icons/video.png"
 import tag from "./../assets/icons/tag.png"
 
-function Instagram() {
+function Instagram({setOpenModal, openModal}) {
   const [toggleState, setToggleState] = useState(1);
+  
 
   const toggleTab = (index) => {
     setToggleState(index);
   };
-
+  
   return (
     <div className="container">
       <div className="bloc-tabs">
@@ -44,7 +45,7 @@ function Instagram() {
         <div
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
-         <Gonderiler/>
+         <Gonderiler setOpenModal={setOpenModal} openModal={openModal}/>
         </div>
 
         <div

@@ -1,43 +1,21 @@
-
-import begen from "./../../assets/icons/begen.png"
-import yorum_1 from "./../../assets/icons/yorum_1.png"
-import "./style.scss";
 import g1 from "./../../assets/images/g1.jpg";
 import g2 from "./../../assets/images/g2.jpg";
 import g3 from "./../../assets/images/g3.jpg";
 import g4 from "./../../assets/images/g4.jpg";
 import g5 from "./../../assets/images/g5.jpg";
 import g6 from "./../../assets/images/g6.jpg";
-import { useState } from "react";
+import "./style.scss";
+import RenderCard from "../../components/card/RenderCard.jsx";
 
 
-const Gonderiler = () => {
-  function renderCard(item) {
-   
-    return (
-      <>
-        
-        <div className="img-container" key={item.id}>
-          <img className="img" src={item.image} alt="" />
-      
-            <div className="icon">
-              <div>
-                <img src={begen} />
-                <span>{item.likeNumber}</span>
-              </div>
-              <div>
-                <img src={yorum_1} />
-                <span>{item.comment}</span>
-              </div>
-            </div>
-          </div>
-      </>
-    );
-  }
+const Gonderiler = ({setOpenModal, openModal}) => {
+  
   return (
     <div className="Gonderiler">
       
-      {dummyData.map((item) => renderCard(item))}
+      {dummyData.map((item, key) => <RenderCard setOpenModal={setOpenModal} openModal={openModal} item={item} key={key} />
+        )
+      }
     </div>
   );
 };
