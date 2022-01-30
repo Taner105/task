@@ -6,6 +6,7 @@ import Etiketlenenler from "./etiketlenenler"
 import grid from "./../assets/icons/grid.png"
 import video from "./../assets/icons/video.png"
 import tag from "./../assets/icons/tag.png"
+import Modal from "../components/modal/Modal"
 
 function Instagram({setOpenModal, openModal}) {
   const [toggleState, setToggleState] = useState(1);
@@ -15,28 +16,34 @@ function Instagram({setOpenModal, openModal}) {
     setToggleState(index);
   };
   
+  
   return (
-    <div className="container">
+    <>
+    
+    {openModal ? (
+      <Modal/>
+    ) : (
+      <div className="container">
       <div className="bloc-tabs">
         <button
           className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(1)}
         >
-         <img src={grid} alt="grid" />
+         <img style={{width:"15px"}} src={grid} alt="grid" />
         GÖNDERİLER
         </button>
         <button
           className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(2)}
         >
-        <img src={video} alt="video" />
+        <img style={{width:"15px"}} src={video} alt="video" />
          REELS
         </button>
         <button
           className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(3)}
         >
-          <img src={tag} alt="tag" />
+          <img style={{width:"15px"}} src={tag} alt="tag" />
          ETİKETLENENLER
         </button>
       </div>
@@ -61,6 +68,11 @@ function Instagram({setOpenModal, openModal}) {
         </div>
       </div>
     </div>
+
+    )}
+    
+    </>
+    
   );
 }
 

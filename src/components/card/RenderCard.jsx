@@ -14,7 +14,7 @@ const RenderCard = ({item, setOpenModal, openModal}) => {
       
             <div className="icon">
               <div>
-                <img src={begen} />
+                <img style={{background:"#fff"}} src={begen} />
                 <span>{item.likeNumber}</span>
               </div>
               <div>

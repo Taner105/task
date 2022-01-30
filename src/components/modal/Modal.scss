@@ -1,24 +1,30 @@
 .modalBackground {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(200, 200, 200);
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.5);
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
+
   .modalContainer {
-    width: 500px;
-    height: 500px;
-    border-radius: 12px;
+    width: 825px;
+    height: 595px;
+    border-radius: 2px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
-    flex-direction: column;
-    padding: 25px;
-    .titleCloseBtn {
-      display: flex;
-      justify-content: flex-end;
-    }
+    flex-direction: row;
+    // padding: 15px;
+    // .titleCloseBtn {
+    //   display: flex;
+    //   justify-content: flex-end;
+    // }
     .modalContainer .footer {
       flex: 20%;
       display: flex;
@@ -36,14 +42,63 @@
     }
 
     .modal-img {
-      width: 50px;
-      height: 50px;
+      width: 330px;
+      height: 595px;
+    }
+    .body {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .comment_text {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      .indir2 {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 1px solid rgb(182, 182, 182);
+        margin-left: 5px;
+      }
+    }
+    .com_like_send_log {
+      // position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgb(194, 191, 191);
+      margin-top: 260px;
+      .com_like_send {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        #like {
+          margin: 10px;
+          width: 24px;
+          height: 24px;
+        }
+      }
+      #log {
+        width: 24px;
+        height: 24px;
+        margin-right: 28px;
+      }
+    }
+    .footer-comment {
+      display: flex;
+      // justify-content: space-around;
+      // align-items: center;
+      margin-top: 8px;
+      margin-left: 10px;
     }
   }
-  .indir {
+  .indir1 {
     width: 42px;
     height: 42px;
     border-radius: 50%;
     border: 1px solid rgb(182, 182, 182);
+    margin-left: 5px;
   }
 }
