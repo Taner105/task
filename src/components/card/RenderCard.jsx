@@ -1,5 +1,6 @@
 import begen from "../../assets/icons/begen.png"
 import yorum_1 from "../../assets/icons/yorum_1.png"
+import { FcLike } from "react-icons/fc"
 
 const RenderCard = ({item, setOpenModal, openModal}) => {
   
@@ -14,7 +15,8 @@ const RenderCard = ({item, setOpenModal, openModal}) => {
       
             <div className="icon">
               <div>
-                <img style={{background:"#fff"}} src={begen} />
+                {/* <img style={{backgroundColor:"#fff"}} src={begen} /> */}
+                <FcLike />
                 <span>{item.likeNumber}</span>
               </div>
               <div>

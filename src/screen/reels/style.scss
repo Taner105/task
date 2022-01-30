@@ -1,3 +1,13 @@
-.Reels {
-    background-color: yellow;
+.reelsMap {
+  cursor: pointer;
+  display: inline-block;
+  flex-wrap: nowrap;
+  margin: 5px;
+
+  .img {
+    width: 200px;
+    height: 330px;
+    min-height: auto;
+    min-width: auto;
+  }
 }
