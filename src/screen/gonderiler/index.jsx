@@ -7,15 +7,19 @@ import g6 from "./../../assets/images/g6.jpg";
 import "./style.scss";
 import RenderCard from "../../components/card/RenderCard.jsx";
 
-
-const Gonderiler = ({setOpenModal, openModal}) => {
-  
+const Gonderiler = ({ setOpenModal, openModal, modalData }) => {
   return (
     <div className="Gonderiler">
-      
-      {dummyData.map((item, key) => <RenderCard setOpenModal={setOpenModal} openModal={openModal} item={item} key={key} />
-        )
-      }
+      {dummyData.map((item, key) => (
+        <RenderCard
+          dummyData={dummyData}
+          modalData={modalData}
+          setOpenModal={setOpenModal}
+          openModal={openModal}
+          item={item}
+          key={key}
+        />
+      ))}
     </div>
   );
 };

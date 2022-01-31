@@ -3,8 +3,10 @@ import Modal from './components/modal/Modal';
 import Instagram from './screen/Instagram';
 import { useState } from "react";
 
+
 function App() {
   const [openModal, setOpenModal] = useState(false)
+
 
   return (
     <div className="App">
